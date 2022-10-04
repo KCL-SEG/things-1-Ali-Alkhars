@@ -6,11 +6,12 @@ class Thing(Model):
     name = models.CharField(
         max_length = 30,
         unique=True,
-        blank = True
+        blank = False
     )
     description = models.CharField(
         unique=False,
-        max_length = 120
+        max_length = 120,
+        blank = True
     )
     quantity = models.IntegerField(
         unique=False,
